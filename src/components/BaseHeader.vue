@@ -82,6 +82,12 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header-nav img{
+        display: block;
     }
 
     .link-container{
