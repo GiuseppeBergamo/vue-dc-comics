@@ -2,18 +2,21 @@
   <div id="app">
     <BaseHeader></BaseHeader>
     <TheMain></TheMain>
+    <FooterJumbotron></FooterJumbotron>
   </div>
 </template>
 
 <script>
 import BaseHeader from './components/BaseHeader.vue'
 import TheMain from './components/TheMain.vue'
+import FooterJumbotron from './components/FooterJumbotron.vue'
 
 export default {
   name: 'App',
   components: {
     BaseHeader,
     TheMain,
+    FooterJumbotron,
 }
 }
 </script>
