@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <BaseHeader></BaseHeader>
+    <BaseJumbotron></BaseJumbotron>
     <TheMain></TheMain>
     <BaseFooter></BaseFooter>
   </div>
@@ -10,6 +11,7 @@
 import BaseHeader from './components/BaseHeader.vue'
 import TheMain from './components/TheMain.vue'
 import BaseFooter from './components/BaseFooter.vue'
+import BaseJumbotron from './components/BaseJumbotron.vue'
 
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     BaseHeader,
     TheMain,
-    BaseFooter
+    BaseFooter,
+    BaseJumbotron
 }
 }
 </script>
