@@ -1,51 +1,13 @@
 <template>
   <div id="jumbotron">
     <div class="container footer-link-container">
-      <div class="footer-links">
-        <h4>DC COMICS</h4>
+      <div class="footer-links" v-for="list in footerLinks" :key="list.title">
+        <h4>{{ list.title }}</h4>
         <ul>
-          <li>Characters</li>
-          <li>Comics</li>
-          <li>Movies</li>
-          <li>TV</li>
-          <li>Games</li>
-          <li>Videos</li>
-          <li>News</li>
+          <li v-for="link in list.links" :key="link.text"><a :href="link.url">{{ link.text }}</a></li>
         </ul>
       </div>
-      <div class="footer-links">
-        <h4>SHOP</h4>
-        <ul>
-          <li>Shop DC</li>
-          <li>Shop DC Collectibles</li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>DC</h4>
-        <ul>
-          <li>Terms of use</li>
-          <li>Privacy Policy (New)</li>
-          <li>Ad Choices</li>
-          <li>Advertising</li>
-          <li>Jobs</li>
-          <li>Subscriptions</li>
-          <li>Talent Workshop</li>
-          <li>CPSC Certificates</li>
-          <li>Ratings</li>
-          <li>Shop Help</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>SITES</h4>
-        <ul>
-          <li>DC</li>
-          <li>MAD Magazine</li>
-          <li>DC Kids</li>
-          <li>DC Universe</li>
-          <li>DC Power Visa</li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -54,7 +16,56 @@
 export default {
   name: 'FooterJumbotron',
   data() {
-    return 
+    return {
+      footerLinks: [
+        {
+          title: 'DC COMICS',
+          links: [
+            {url: '#', text: 'Characters'},
+            {url: '#', text: 'Comics'},
+            {url: '#', text: 'Movies'},
+            {url: '#', text: 'TV'},
+            {url: '#', text: 'Games'},
+            {url: '#', text: 'Videos'},
+            {url: '#', text: 'News'}
+          ]
+        },
+        {
+          title: 'SHOP',
+          links: [
+            {url: '#', text: 'SHOP DC'},
+            {url: '#', text: 'SHOP DC Collectibles'}
+            
+          ]
+        },
+        {
+          title: 'DC',
+          links: [
+            {url: '#', text: 'Terms of use'},
+            {url: '#', text: 'Privacy Policy (new)'},
+            {url: '#', text: 'Ad Choises'},
+            {url: '#', text: 'Advertising'},
+            {url: '#', text: 'Jobs'},
+            {url: '#', text: 'Subscriptions'},
+            {url: '#', text: 'Talent Workshop'},
+            {url: '#', text: 'CPSC Certificates'},
+            {url: '#', text: 'Ratings'},
+            {url: '#', text: 'Shop Help'},
+            {url: '#', text: 'Contact Us'}
+          ]
+        },
+        {
+          title: 'SITES',
+          links: [
+            {url: '#', text: 'DC'},
+            {url: '#', text: 'MAD Magazine'},
+            {url: '#', text: 'DC Kids'},
+            {url: '#', text: 'DC Universe'},
+            {url: '#', text: 'DC Power Visa'},
+          ]
+        }
+      ]
+    }
   }
 }
 </script>
@@ -88,6 +99,10 @@ export default {
   .footer-links h4 {
     margin-bottom: 15px;
     font-size: 1.5rem;
+  }
+
+  .footer-links a {
+    color: white;
   }
 
 </style>
