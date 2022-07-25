@@ -3,6 +3,7 @@
     <BaseHeader></BaseHeader>
     <TheMain></TheMain>
     <FooterJumbotron></FooterJumbotron>
+    <BottomFooter></BottomFooter>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import BaseHeader from './components/BaseHeader.vue'
 import TheMain from './components/TheMain.vue'
 import FooterJumbotron from './components/FooterJumbotron.vue'
+import BottomFooter from './components/BottomFooter.vue'
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     BaseHeader,
     TheMain,
     FooterJumbotron,
+    BottomFooter
 }
 }
 </script>
